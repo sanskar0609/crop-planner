@@ -67,7 +67,7 @@ export default function CropRotationPlanner() {
     setLoading(true);
     try {
       const formBody = new URLSearchParams(formData);
-      const res = await fetch("http://127.0.0.1:5000/recommend_crop", {
+      const res = await fetch("${process.env.REACT_APP_API_URL}/recommend_crop", {
         method: "POST",
         body: formBody,
       });
